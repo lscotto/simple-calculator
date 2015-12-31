@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650723541C35BDE000623FF0 /* buttonsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 650723531C35BDE000623FF0 /* buttonsound.wav */; };
 		65B60D9D1C358C1B00525423 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B60D9C1C358C1B00525423 /* AppDelegate.swift */; };
 		65B60D9F1C358C1B00525423 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B60D9E1C358C1B00525423 /* ViewController.swift */; };
 		65B60DA21C358C1B00525423 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B60DA01C358C1B00525423 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650723531C35BDE000623FF0 /* buttonsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buttonsound.wav; sourceTree = "<group>"; };
 		65B60D991C358C1B00525423 /* simple-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "simple-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B60D9C1C358C1B00525423 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65B60D9E1C358C1B00525423 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		65B60D9B1C358C1B00525423 /* simple-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				650723531C35BDE000623FF0 /* buttonsound.wav */,
 				65B60D9C1C358C1B00525423 /* AppDelegate.swift */,
 				65B60D9E1C358C1B00525423 /* ViewController.swift */,
 				65B60DA01C358C1B00525423 /* Main.storyboard */,
@@ -123,6 +126,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650723541C35BDE000623FF0 /* buttonsound.wav in Resources */,
 				65B60DA71C358C1B00525423 /* LaunchScreen.storyboard in Resources */,
 				65B60DA41C358C1B00525423 /* Assets.xcassets in Resources */,
 				65B60DA21C358C1B00525423 /* Main.storyboard in Resources */,

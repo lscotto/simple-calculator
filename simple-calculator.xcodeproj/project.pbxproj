@@ -285,6 +285,7 @@
 				65B60DAD1C358C1B00525423 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -34,19 +34,19 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sAU-dX-N2e">
                                         <rect key="frame" x="8" y="193" width="584" height="77"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naW-OL-ury">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naW-OL-ury">
                                                 <rect key="frame" x="0.0" y="0.0" width="146" height="77"/>
                                                 <state key="normal" image="7"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCk-tb-uXd">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCk-tb-uXd">
                                                 <rect key="frame" x="146" y="0.0" width="146" height="77"/>
                                                 <state key="normal" image="8"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5q-99-35z">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj9-RQ-spc">
                                                 <rect key="frame" x="292" y="0.0" width="146" height="77"/>
                                                 <state key="normal" image="9"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VY2-SB-Ogd">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VY2-SB-Ogd">
                                                 <rect key="frame" x="438" y="0.0" width="146" height="77"/>
                                                 <state key="normal" image="Divide"/>
                                             </button>

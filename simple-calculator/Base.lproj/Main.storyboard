@@ -58,6 +58,9 @@
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VY2-SB-Ogd">
                                                 <rect key="frame" x="269" y="0.0" width="90" height="85"/>
                                                 <state key="normal" image="Divide"/>
+                                                <connections>
+                                                    <action selector="onDividePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="spJ-8i-HIA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -88,6 +91,9 @@
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpo-bL-Z4E">
                                                 <rect key="frame" x="269" y="0.0" width="90" height="87"/>
                                                 <state key="normal" image="Multiply"/>
+                                                <connections>
+                                                    <action selector="onMultplyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nEB-UJ-V5R"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -118,6 +124,9 @@
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odr-33-Jmu">
                                                 <rect key="frame" x="269" y="0.0" width="90" height="86"/>
                                                 <state key="normal" image="Subtract"/>
+                                                <connections>
+                                                    <action selector="onSubtractPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AeB-5U-1ck"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -134,14 +143,23 @@
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvv-vA-UMc">
                                                 <rect key="frame" x="90" y="0.0" width="90" height="87"/>
                                                 <state key="normal" image="Period"/>
+                                                <connections>
+                                                    <action selector="onPeriodPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MxT-V9-wTk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wOZ-N3-iaH">
                                                 <rect key="frame" x="180" y="0.0" width="89" height="87"/>
                                                 <state key="normal" image="Clear"/>
+                                                <connections>
+                                                    <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mVk-OT-7En"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdO-lG-7em">
                                                 <rect key="frame" x="269" y="0.0" width="90" height="87"/>
                                                 <state key="normal" image="Add"/>
+                                                <connections>
+                                                    <action selector="onAddPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5fu-R6-tel"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -151,6 +169,9 @@
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyI-17-5JN">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="86"/>
                                                 <state key="normal" image="Equals"/>
+                                                <connections>
+                                                    <action selector="onEqualsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hpg-sd-htx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

@@ -12,12 +12,13 @@ import AVFoundation
 class ViewController: UIViewController {
     
     //ENUMERATIONS
-    enum op: Operation {
+    enum Operation: String {
         
         case Divide = "/"
         case Multply = "*"
         case Subtract = "-"
         case Add = "+"
+        case Empty = "Empty"
         
     }
     
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
     var runningNumber = ""
     var leftValueString = ""
     var rightValueString = ""
-    
+    var currentOperation: Operation = Operation.Empty
     
     
     //FUNCTIONS
@@ -58,8 +59,10 @@ class ViewController: UIViewController {
     
     //ACTIONS
     @IBAction func numberPressed(btn: UIButton!) {
-        
         buttonSound.play()
+        
+        runningNumber += "\(btn.tag)"
+        outputLabel.text = runningNumber
         
     }
     

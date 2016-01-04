@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     //OUTLETS
     @IBOutlet weak var outputLabel: UILabel!
-    
+    @IBOutlet weak var decimalPointPressed: UIButton!
     
     //PROPERTIES
     var buttonSound: AVAudioPlayer!
@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     var rightValueString = ""
     var currentOperation: Operation = Operation.Empty
     var result = ""
+    var decimal = "."
     
     
     //FUNCTIONS
@@ -60,22 +61,23 @@ class ViewController: UIViewController {
             //RUN MATHIMATICS
             rightValueString = runningNumber
             runningNumber = ""
+            decimalPointPressed.enabled = true
             
             if currentOperation == Operation.Multply {
                 
-                result = "\(Int(leftValueString)! * Int(rightValueString)!)"
+                result = "\(Double(leftValueString)! * Double(rightValueString)!)"
                 
             } else if currentOperation == Operation.Divide {
                 
-                result = "\(Int(leftValueString)! / Int(rightValueString)!)"
+                result = "\(Double(leftValueString)! / Double(rightValueString)!)"
                 
             } else if currentOperation == Operation.Subtract {
                 
-                result = "\(Int(leftValueString)! - Int(rightValueString)!)"
+                result = "\(Double(leftValueString)! - Double(rightValueString)!)"
                 
             } else if currentOperation == Operation.Add {
                 
-                result = "\(Int(leftValueString)! + Int(rightValueString)!)"
+                result = "\(Double(leftValueString)! + Double(rightValueString)!)"
                 
             }
             
@@ -90,6 +92,7 @@ class ViewController: UIViewController {
             leftValueString = runningNumber
             runningNumber = ""
             currentOperation = op
+            decimalPointPressed.enabled = true
             
         }
     }
@@ -138,12 +141,12 @@ class ViewController: UIViewController {
         
         processOperation(Operation.Add)
         
+        
     }
     
     @IBAction func onPeriodPressed(sender: AnyObject) {
-        
-        outputLabel.text?.appendContentsOf(".")
-        leftValueString = ""
+        playSound()
+        decimalPressed()
         
     }
     
@@ -153,6 +156,8 @@ class ViewController: UIViewController {
         leftValueString = "0"
         rightValueString = "0"
         outputLabel.text = "0"
+        decimalPointPressed.enabled = true
+
         processOperation(Operation.Empty)
         
     }
@@ -160,8 +165,29 @@ class ViewController: UIViewController {
     @IBAction func onEqualsPressed(sender: AnyObject) {
         
         processOperation(currentOperation)
+        currentOperation = Operation.Empty
+        decimalPointPressed.enabled = true
         
     }
+    
+    func decimalPressed() {
+        
+        if decimalPointPressed.enabled != false {
+            
+            runningNumber = "\(runningNumber)\(decimal)"
+            outputLabel.text = "\(runningNumber)"
+            decimalPointPressed.enabled = false
+            
+        } else {
+            
+        
+            
+        }
+        
+    }
+
+    
+    
     
 }
 

@@ -59,30 +59,36 @@ class ViewController: UIViewController {
         if currentOperation != Operation.Empty {
             
             //RUN MATHIMATICS
-            rightValueString = runningNumber
-            runningNumber = ""
-            decimalPointPressed.enabled = true
             
-            if currentOperation == Operation.Multply {
+            //AN OPERATOR WAS SELECTED
+            if runningNumber != "" || leftValueString == "" || rightValueString == "" || currentOperation == Operation.Empty {
                 
-                result = "\(Double(leftValueString)! * Double(rightValueString)!)"
+                rightValueString = runningNumber
+                runningNumber = ""
+                decimalPointPressed.enabled = true
                 
-            } else if currentOperation == Operation.Divide {
+                if currentOperation == Operation.Multply {
+                    
+                    result = "\(Double(leftValueString)! * Double(rightValueString)!)"
+                    
+                } else if currentOperation == Operation.Divide {
+                    
+                    result = "\(Double(leftValueString)! / Double(rightValueString)!)"
+                    
+                } else if currentOperation == Operation.Subtract {
+                    
+                    result = "\(Double(leftValueString)! - Double(rightValueString)!)"
+                    
+                } else if currentOperation == Operation.Add {
+                    
+                    result = "\(Double(leftValueString)! + Double(rightValueString)!)"
+                    
+                }
                 
-                result = "\(Double(leftValueString)! / Double(rightValueString)!)"
-                
-            } else if currentOperation == Operation.Subtract {
-                
-                result = "\(Double(leftValueString)! - Double(rightValueString)!)"
-                
-            } else if currentOperation == Operation.Add {
-                
-                result = "\(Double(leftValueString)! + Double(rightValueString)!)"
+                leftValueString = result
+                outputLabel.text = result
                 
             }
-            
-            leftValueString = result
-            outputLabel.text = result
             
             currentOperation = op
             
@@ -141,7 +147,6 @@ class ViewController: UIViewController {
         
         processOperation(Operation.Add)
         
-        
     }
     
     @IBAction func onPeriodPressed(sender: AnyObject) {
@@ -166,6 +171,7 @@ class ViewController: UIViewController {
         
         processOperation(currentOperation)
         currentOperation = Operation.Empty
+        runningNumber = result
         decimalPointPressed.enabled = true
         
     }
@@ -180,13 +186,11 @@ class ViewController: UIViewController {
             
         } else {
             
-        
+            print("Error")
             
         }
         
     }
-
-    
     
     
 }

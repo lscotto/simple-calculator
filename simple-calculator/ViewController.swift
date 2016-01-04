@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     var leftValueString = ""
     var rightValueString = ""
     var currentOperation: Operation = Operation.Empty
+    var result = ""
     
     
     //FUNCTIONS
@@ -50,16 +51,65 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    func processOperation(op: Operation) {
+        playSound()
+        
+        if currentOperation != Operation.Empty {
+            
+            //RUN MATHIMATICS
+            rightValueString = runningNumber
+            runningNumber = ""
+            
+            if currentOperation == Operation.Multply {
+                
+                result = "\(Int(leftValueString)! * Int(rightValueString)!)"
+                
+            } else if currentOperation == Operation.Divide {
+                
+                result = "\(Int(leftValueString)! / Int(rightValueString)!)"
+                
+            } else if currentOperation == Operation.Subtract {
+                
+                result = "\(Int(leftValueString)! - Int(rightValueString)!)"
+                
+            } else if currentOperation == Operation.Add {
+                
+                result = "\(Int(leftValueString)! + Int(rightValueString)!)"
+                
+            }
+            
+            leftValueString = result
+            outputLabel.text = result
+            
+            currentOperation = op
+            
+        } else {
+            
+            //OPERATOR HAS BEEN PRESSED
+            leftValueString = runningNumber
+            runningNumber = ""
+            currentOperation = op
+            
+        }
+    }
+    
     func playSound() {
         
+        if buttonSound.playing {
+            
+            buttonSound.stop()
+            
+        }
         
+        buttonSound.play()
         
     }
     
     
     //ACTIONS
     @IBAction func numberPressed(btn: UIButton!) {
-        buttonSound.play()
+        playSound()
         
         runningNumber += "\(btn.tag)"
         outputLabel.text = runningNumber
@@ -68,43 +118,48 @@ class ViewController: UIViewController {
     
     @IBAction func onDividePressed(sender: AnyObject) {
         
-        
+        processOperation(Operation.Divide)
         
     }
     
     @IBAction func onMultplyPressed(sender: AnyObject) {
         
-        
+        processOperation(Operation.Multply)
         
     }
     
     @IBAction func onSubtractPressed(sender: AnyObject) {
         
-        
+        processOperation(Operation.Subtract)
         
     }
     
     @IBAction func onAddPressed(sender: AnyObject) {
         
-        
+        processOperation(Operation.Add)
         
     }
     
     @IBAction func onPeriodPressed(sender: AnyObject) {
         
-        
+        outputLabel.text?.appendContentsOf(".")
+        leftValueString = ""
         
     }
     
     @IBAction func onClearPressed(sender: AnyObject) {
         
-        
+        runningNumber = "0"
+        leftValueString = "0"
+        rightValueString = "0"
+        outputLabel.text = "0"
+        processOperation(Operation.Empty)
         
     }
     
     @IBAction func onEqualsPressed(sender: AnyObject) {
         
-        
+        processOperation(currentOperation)
         
     }
     

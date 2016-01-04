@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     //OUTLETS
     @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet var operatorLabel: UILabel!
     @IBOutlet weak var decimalPointPressed: UIButton!
     
     //PROPERTIES
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        operatorLabel.text = ""
         let path = NSBundle.mainBundle().pathForResource("buttonsound", ofType: "wav")
         let soundURL = NSURL(fileURLWithPath: path!)
         
@@ -59,9 +61,7 @@ class ViewController: UIViewController {
         if currentOperation != Operation.Empty {
             
             //RUN MATHIMATICS
-            
-            //AN OPERATOR WAS SELECTED
-            if runningNumber != "" || leftValueString == "" || rightValueString == "" || currentOperation == Operation.Empty {
+            if runningNumber != "" {
                 
                 rightValueString = runningNumber
                 runningNumber = ""
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
                 } else if currentOperation == Operation.Add {
                     
                     result = "\(Double(leftValueString)! + Double(rightValueString)!)"
-                    
+
                 }
                 
                 leftValueString = result
@@ -101,6 +101,7 @@ class ViewController: UIViewController {
             decimalPointPressed.enabled = true
             
         }
+        
     }
     
     func playSound() {
@@ -112,67 +113,6 @@ class ViewController: UIViewController {
         }
         
         buttonSound.play()
-        
-    }
-    
-    
-    //ACTIONS
-    @IBAction func numberPressed(btn: UIButton!) {
-        playSound()
-        
-        runningNumber += "\(btn.tag)"
-        outputLabel.text = runningNumber
-        
-    }
-    
-    @IBAction func onDividePressed(sender: AnyObject) {
-        
-        processOperation(Operation.Divide)
-        
-    }
-    
-    @IBAction func onMultplyPressed(sender: AnyObject) {
-        
-        processOperation(Operation.Multply)
-        
-    }
-    
-    @IBAction func onSubtractPressed(sender: AnyObject) {
-        
-        processOperation(Operation.Subtract)
-        
-    }
-    
-    @IBAction func onAddPressed(sender: AnyObject) {
-        
-        processOperation(Operation.Add)
-        
-    }
-    
-    @IBAction func onPeriodPressed(sender: AnyObject) {
-        playSound()
-        decimalPressed()
-        
-    }
-    
-    @IBAction func onClearPressed(sender: AnyObject) {
-        
-        runningNumber = "0"
-        leftValueString = "0"
-        rightValueString = "0"
-        outputLabel.text = "0"
-        decimalPointPressed.enabled = true
-
-        processOperation(Operation.Empty)
-        
-    }
-    
-    @IBAction func onEqualsPressed(sender: AnyObject) {
-        
-        processOperation(currentOperation)
-        currentOperation = Operation.Empty
-        runningNumber = result
-        decimalPointPressed.enabled = true
         
     }
     
@@ -191,6 +131,75 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    
+    //ACTIONS
+    @IBAction func numberPressed(btn: UIButton!) {
+        playSound()
+        
+        runningNumber += "\(btn.tag)"
+        outputLabel.text = runningNumber
+        
+    }
+    
+    @IBAction func onDividePressed(sender: AnyObject) {
+        
+        processOperation(Operation.Divide)
+        operatorLabel.text = "/"
+        
+    }
+    
+    @IBAction func onMultplyPressed(sender: AnyObject) {
+        
+        processOperation(Operation.Multply)
+        operatorLabel.text = "X"
+        
+    }
+    
+    @IBAction func onSubtractPressed(sender: AnyObject) {
+        
+        processOperation(Operation.Subtract)
+        operatorLabel.text = "-"
+        
+    }
+    
+    @IBAction func onAddPressed(sender: AnyObject) {
+        
+        processOperation(Operation.Add)
+        operatorLabel.text = "+"
+        
+    }
+    
+    @IBAction func onPeriodPressed(sender: AnyObject) {
+        playSound()
+        decimalPressed()
+        
+    }
+    
+    @IBAction func onClearPressed(sender: AnyObject) {
+        
+        runningNumber = "0"
+        leftValueString = "0"
+        rightValueString = "0"
+        outputLabel.text = "0"
+        operatorLabel.text = ""
+        decimalPointPressed.enabled = true
+        
+        processOperation(Operation.Empty)
+        
+    }
+    
+    @IBAction func onEqualsPressed(sender: AnyObject) {
+        
+        processOperation(currentOperation)
+        currentOperation = Operation.Empty
+        runningNumber = result
+        operatorLabel.text = ""
+        decimalPointPressed.enabled = false
+        
+    }
+    
+
     
     
 }

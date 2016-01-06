@@ -204,6 +204,10 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func volumeControlButton(sender: AnyObject) {
+        
+
+    }
 
     
     

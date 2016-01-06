@@ -54,6 +54,11 @@ class ViewController: UIViewController {
         }
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        
+        return UIStatusBarStyle.LightContent
+        
+    }
     
     func processOperation(op: Operation) {
         playSound()
@@ -145,14 +150,14 @@ class ViewController: UIViewController {
     @IBAction func onDividePressed(sender: AnyObject) {
         
         processOperation(Operation.Divide)
-        operatorLabel.text = "/"
+        operatorLabel.text = "÷"
         
     }
     
     @IBAction func onMultplyPressed(sender: AnyObject) {
         
         processOperation(Operation.Multply)
-        operatorLabel.text = "X"
+        operatorLabel.text = "x"
         
     }
     

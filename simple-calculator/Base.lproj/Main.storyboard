@@ -210,6 +210,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxW-dM-41l">
+                                <rect key="frame" x="324" y="28" width="31" height="32"/>
+                                <state key="normal" image="muteOff"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -218,6 +222,8 @@
                             <constraint firstItem="Lr1-pZ-700" firstAttribute="trailing" secondItem="t5c-jD-Thu" secondAttribute="trailing" constant="12" id="822-Wt-gnj"/>
                             <constraint firstItem="Lr1-pZ-700" firstAttribute="bottom" secondItem="t5c-jD-Thu" secondAttribute="bottom" constant="4" id="89t-qg-URg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ERI-XV-ifL" secondAttribute="bottom" id="AJT-ys-Jlx"/>
+                            <constraint firstItem="wxW-dM-41l" firstAttribute="top" secondItem="XPD-yO-JRf" secondAttribute="top" constant="8" id="Hrg-hC-stf"/>
+                            <constraint firstItem="wxW-dM-41l" firstAttribute="leading" secondItem="XPD-yO-JRf" secondAttribute="leading" constant="316" id="IBV-65-ZpI"/>
                             <constraint firstItem="B6c-dd-Cb7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="R4F-fN-V27"/>
                             <constraint firstItem="0eC-HU-UBR" firstAttribute="leading" secondItem="XPD-yO-JRf" secondAttribute="leading" constant="18" id="URA-Z1-W6F"/>
                             <constraint firstItem="0eC-HU-UBR" firstAttribute="top" secondItem="XPD-yO-JRf" secondAttribute="top" constant="6" id="Vx0-8a-SZP"/>
@@ -226,8 +232,14 @@
                             <constraint firstItem="ERI-XV-ifL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mEw-bM-BNR"/>
                             <constraint firstItem="XPD-yO-JRf" firstAttribute="trailing" secondItem="0eC-HU-UBR" secondAttribute="trailing" constant="12" id="oUl-Sc-Lvn"/>
                             <constraint firstItem="ERI-XV-ifL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pPk-Oc-D9A"/>
+                            <constraint firstItem="XPD-yO-JRf" firstAttribute="trailing" secondItem="wxW-dM-41l" secondAttribute="trailing" constant="12" id="skK-Re-7KK"/>
                             <constraint firstAttribute="trailing" secondItem="B6c-dd-Cb7" secondAttribute="trailing" id="yjU-c0-ayA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IBV-65-ZpI"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -261,5 +273,6 @@
         <image name="Multiply" width="73" height="73"/>
         <image name="Period" width="72" height="73"/>
         <image name="Subtract" width="73" height="72"/>
+        <image name="muteOff" width="31" height="32"/>
     </resources>
 </document>

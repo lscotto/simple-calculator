@@ -159,7 +159,7 @@ class ViewController: UIViewController {
     @IBAction func onSubtractPressed(sender: AnyObject) {
         
         processOperation(Operation.Subtract)
-        operatorLabel.text = "-"
+        operatorLabel.text = "–"
         
     }
     
@@ -178,9 +178,9 @@ class ViewController: UIViewController {
     
     @IBAction func onClearPressed(sender: AnyObject) {
         
-        runningNumber = "0"
-        leftValueString = "0"
-        rightValueString = "0"
+        runningNumber = ""
+        leftValueString = ""
+        rightValueString = ""
         outputLabel.text = "0"
         operatorLabel.text = ""
         decimalPointPressed.enabled = true

@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet var operatorLabel: UILabel!
     @IBOutlet weak var decimalPointPressed: UIButton!
+    @IBOutlet weak var volumeIcon: UIButton!
     
     //PROPERTIES
     var buttonSound: AVAudioPlayer!
@@ -112,13 +113,9 @@ class ViewController: UIViewController {
     func playSound() {
         
         if buttonSound.playing {
-            
             buttonSound.stop()
-            
         }
-        
         buttonSound.play()
-        
     }
     
     func decimalPressed() {
@@ -206,10 +203,9 @@ class ViewController: UIViewController {
     
     @IBAction func volumeControlButton(sender: AnyObject) {
         
-
+        
+        
     }
-
-    
     
 }
 

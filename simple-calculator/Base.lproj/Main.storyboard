@@ -243,6 +243,7 @@
                         <outlet property="decimalPointPressed" destination="yvv-vA-UMc" id="7Jw-mV-jW3"/>
                         <outlet property="operatorLabel" destination="0eC-HU-UBR" id="JqW-Eo-M81"/>
                         <outlet property="outputLabel" destination="t5c-jD-Thu" id="hy5-6L-afA"/>
+                        <outlet property="volumeIcon" destination="wxW-dM-41l" id="Khy-Vc-IB6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
